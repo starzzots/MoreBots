@@ -8,6 +8,7 @@ My goals for this project are to further my python and programming knowlegde and
 ---------------------------------------------------------------------------------------------------------------------------------------------
 
 Goals
+---------------------------------------------------------------------------------------------------------------------------------------------
 1- create a tutorial teaching how to create own  osrs script/woodcutting start with python --youtube --edit githubs readme as a follow along for people who like that option
 - start with woodcutting then teach more advanced methods Ive found - can track hp, make pathing, banking - list goes on 
 
