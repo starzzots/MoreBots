@@ -1,5 +1,5 @@
 import sys
-sys.path.insert(0,'c:\\Users\\Kyle\\Documents\\skeletoncode')
+sys.path.insert(0,'c:\\Users\\Kyle\\Documents\\skeletoncode') # change this to the dir that you saved the project to 
 from tools.windowcapture import WindowCapture
 from tools.clicks import *
 from time import time, sleep
