@@ -22,3 +22,9 @@ Setup
 2) Then pip install r- requirements.txt
    -this will install all libraries needed for this method
    -its only a few just win32, numpy, pyautogui, keyboard
+   -Ill explain later how I use them in my scripts
+
+3) ...
+4) ...
+5) ...
+------------------------------------------------------------------------------------------------------------------------------------------
