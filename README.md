@@ -13,3 +13,12 @@ Goals
 - start with woodcutting then teach more advanced methods Ive found - can track hp, make pathing, banking - list goes on 
 
 2- will add goal 2 after first goal finished
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+Setup
+---------------------------------------------------------------------------------------------------------------------------------------------
+1) First grab the code from here and put into your own envirement 
+
+2) Then pip install r- requirements.txt
+   -this will install all libraries needed for this method
+   -its only a few just win32, numpy, pyautogui, keyboard
