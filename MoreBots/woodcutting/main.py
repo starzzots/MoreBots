@@ -1,6 +1,6 @@
 import sys
 sys.path.insert(0,'c:\\Users\\Kyle\\Documents\\skeletoncode') # change this to the dir that you saved the project to 
-from tools.windowcapture import WindowCapture
+from tools.windowcapture import WindowCapture # actually might not need this need to check when im home should be called when I import tools.tools
 from tools.clicks import *
 from time import time, sleep
 from tools.tools import *
