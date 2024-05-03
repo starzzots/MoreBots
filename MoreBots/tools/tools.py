@@ -2,8 +2,10 @@ from tools.windowcapture import WindowCapture
 from tools.clicks import *
 from time import time, sleep
 
+screen_size=(0,0,1920,1080)
+osrs_minimized=(0,0,1080,670)#testing this more
 
-def findobjat(objsRGBVal,coords=(0,0,1080,670),stepleftright=1,stepupdown=1,delta1x=0,delta2x=0,delta1y=0,delta2y=0,hwnd="RuneLite"):#topleftx, toplefty, bottomrightx, bottomrighty
+def findobjat(objsRGBVal,coords=screen_size,stepleftright=1,stepupdown=1,delta1x=0,delta2x=0,delta1y=0,delta2y=0,hwnd="RuneLite"):#topleftx, toplefty, bottomrightx, bottomrighty
     flag=0
     wincap = WindowCapture(hwnd)
     screenshot=pg.screenshot(region=(wincap.coords[0],wincap.coords[1],coords[2],coords[3]))
@@ -48,6 +50,14 @@ bagslot={1:locate(619,395),2:locate(660,395),3:locate(703,395),4:locate(745,395)
           "magebook":locate(775,342,offsetx2=12,offsety2=12),
           "bagicon":locate(676,343,offsetx2=12,offsety2=12),
           "alch":locate(670,512,offsetx2=12,offsety2=12)}
+
+bagslotfullscreen={1:(1460,1460,766,766), 2:(1503,1503,766,766), 3:(1545,1545,766,766), 4:(1585,1585,766,766),
+                   5:(1460,1460,800,800), 6:(1503,1503,800,800), 7:(1545,1545,800,800), 8:(1585,1585,800,800),
+                   9:(1460,1460,837,837), 10:(1503,1503,837,837), 11:(1545,1545,837,837), 12:(1585,1585,837,837),
+                   13:(1460,1460,873,873), 14:(1503,1503,873,873), 15:(1545,1545,873,873), 16:(1585,1585,873,873),
+                   17:(1460,1460,910,910), 18:(1503,1503,910,910), 19:(1545,1545,910,910), 20:(1585,1585,910,910),
+                   21:(1460,1460,947,947), 22:(1503,1503,947,947), 23:(1545,1545,947,947), 24:(1585,1585,947,947),
+                   25:(1460,1460,980,980), 26:(1503,1503,980,980), 27:(1545,1545,980,980), 28:(1585,1585,980,980)}
 
 bagslotclicks={1:locate(619,395,offsetx1=-3,offsetx2=3,offsety1=-3,offsety2=3),2:locate(660,395,offsetx1=-3,offsetx2=3,offsety1=-3,offsety2=3),3:locate(703,395,offsetx1=-3,offsetx2=3,offsety1=-3,offsety2=3),4:locate(745,395,offsetx1=-3,offsetx2=3,offsety1=-3,offsety2=3),
           5:locate(619,431,offsetx1=-3,offsetx2=3,offsety1=-3,offsety2=3),6:locate(660,431,offsetx1=-3,offsetx2=3,offsety1=-3,offsety2=3),7:locate(703,431,offsetx1=-3,offsetx2=3,offsety1=-3,offsety2=3),8:locate(745,431,offsetx1=-3,offsetx2=3,offsety1=-3,offsety2=3),
