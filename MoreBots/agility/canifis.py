@@ -17,6 +17,7 @@ pos6=(0,0,6)
 pos7=(0,0,7)
 pos8=(0,0,8)
 glitched=(15,0,15)
+glitched2=(0,0,15)
 fail1=(0,0,9)
 fail2=(0,0,10)
 tokenc=(205,0,0)
@@ -57,6 +58,10 @@ def main():
             sleep(2)
     elif center == glitched:
         Randomize((1063,1073,523,539)).randleft()
+        sleep(5)
+    
+    elif center == glitched2:
+        Randomize((1231,1241,695,702)).randleft()
         sleep(5)
 
     elif center == fail1:
