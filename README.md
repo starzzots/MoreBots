@@ -31,7 +31,7 @@ Setup
 ---------------------------------------------------------------------------------------------------------------------------------------------
 1) First grab the code from here and put into your own envirement 
 
-2) Then pip install r- requirements.txt
+2) Then pip install -r requirements.txt
    -this will install all libraries needed for this method
    -its only a few just pywin32, numpy, pyautogui, keyboard
    -Ill explain later how I use them in my scripts
