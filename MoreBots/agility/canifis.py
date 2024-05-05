@@ -125,7 +125,7 @@ def main():
     pass
 
 if __name__ == "__main__":
-    counter=239
+    counter=0
     while True:
         sleep(1.5)
         counter=counter+logoutcounter()
