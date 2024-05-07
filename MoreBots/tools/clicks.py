@@ -1,7 +1,8 @@
 import pyautogui as pg
 import time
 import random
-import win32con, win32api # type: ignore
+import numpy
+import math
 import keyboard
     
      
@@ -28,9 +29,9 @@ class Randomize():
         keyboard.press('shift')
         pg.moveTo(self.new_x,self.new_y, duration=.08)
         time.sleep(.05)
-        win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN, self.new_x, self.new_y, 0, 0)
+        pg.mouseDown(self.new_x, self.new_y)
         time.sleep(.05)
-        win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP, self.new_x, self.new_y, 0, 0)
+        pg.mouseUp(self.new_x, self.new_y)
         time.sleep(.08)
         keyboard.release('shift')
 
@@ -40,26 +41,33 @@ class Randomize():
     
     def randleftspeed(self):
         pg.moveTo(self.new_x,self.new_y, duration=.02)
-        win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN, self.new_x, self.new_y, 0, 0)
+        pg.mouseDown(self.new_x, self.new_y)
         time.sleep(.05)
-        win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP, self.new_x, self.new_y, 0, 0)
+        pg.mouseUp(self.new_x, self.new_y)
         time.sleep(.03)
     
     
     def randleft(self):
-        pg.moveTo(self.new_x,self.new_y, duration=.06)
-        win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN, self.new_x, self.new_y, 0, 0)
+        start = pg.position()
+        dist = math.dist(start, [self.new_x,self.new_y])
+        durByDistance = numpy.random.uniform(0.00125,0.0014) * dist
+        lowerBounded = max(durByDistance, numpy.random.normal(0.151,0.015), 0.06)
+        dur = min(lowerBounded, numpy.random.normal(0.212,0.06))
+        style = numpy.random.choice([pg.easeOutBack, pg.easeOutQuad], p=[0.01, 0.99])
+
+        pg.moveTo(self.new_x,self.new_y, dur, style)
+        pg.mouseDown(self.new_x, self.new_y)
         time.sleep(.09)
-        win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP, self.new_x, self.new_y, 0, 0)
+        pg.mouseUp(self.new_x, self.new_y)
         time.sleep(.03)
     
     
     def dragmove(self,x,y):
         pg.moveTo(self.new_x,self.new_y, duration=.3)
         time.sleep(.1)
-        win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN, self.new_x, self.new_y, 0, 0)
+        pg.mouseDown(self.new_x, self.new_y)
         pg.moveTo(x, y, duration=.6)
-        win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP, x, y, 0, 0)
+        pg.mouseUp(self.new_x, self.new_y)
         time.sleep(.1)
 
             
